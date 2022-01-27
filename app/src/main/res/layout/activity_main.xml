@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageNameET"
+        android:hint="Enter the image name here"
+        android:maxLength="25"
+        android:textColor="@android:color/holo_green_dark"
+        />
+
+    <ImageView
+        android:id="@+id/imageSelect"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/imageNameET"
+        android:onClick="ChooseImage"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imgg" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageSelect"
+        android:background="@android:color/holo_green_dark"
+        android:text="Save Image"
+        android:textColor="@android:color/white"
+        android:onClick="storeImage"/>
+
+    <Button
+        android:id="@+id/moveToShowActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saveBtn"
+        android:layout_marginTop="2dp"
+        android:text="See all the pictures"
+        android:onClick="moveToShowActivity"/>
+
+
+
+
+</RelativeLayout>
